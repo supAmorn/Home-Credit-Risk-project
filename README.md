@@ -1,32 +1,68 @@
-# Data Project Template
+# Home Credit Risk Data Project
 
-<a target="_blank" href="https://datalumina.com/">
-    <img src="https://img.shields.io/badge/Datalumina-Project%20Template-2856f7" alt="Datalumina Project" />
-</a>
+## Prerequisites
 
-## Cookiecutter Data Science
-This project template is a simplified version of the [Cookiecutter Data Science](https://cookiecutter-data-science.drivendata.org) template, created to suit the needs of Datalumina and made available as a GitHub template.
+- **Python 3.10**: Ensure Python 3.10 is installed on your system.
+- **UV**: Used for managing project dependencies.
 
-## Adjusting .gitignore
+## Set up virtual env 
+To set up your environment variables, you need to install prerequisites python and uv 
 
-Ensure you adjust the `.gitignore` file according to your project needs. For example, since this is a template, the `/data/` folder is commented out and data will not be exlucded from source control:
+### 2. **Install UV**
 
-```plaintext
-# exclude data from source control by default
-# /data/
-```
-
-Typically, you want to exclude this folder if it contains either sensitive data that you do not want to add to version control or large files.
-
-## Duplicating the .env File
-To set up your environment variables, you need to duplicate the `.env.example` file and rename it to `.env`. You can do this manually or using the following terminal command:
+#### On macOS and Linux.
 
 ```bash
-cp .env.example .env # Linux, macOS, Git Bash, WSL
-copy .env.example .env # Windows Command Prompt
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-This command creates a copy of `.env.example` and names it `.env`, allowing you to configure your environment variables specific to your setup.
+#### On Windows.
+```bash
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+#### With pip.
+```bash
+# With pip.
+pip install uv
+```
+### 3. **Package Management**
+We use [UV](https://docs.astral.sh/uv/getting-started/features/) as a package management tool. Follow these steps
+
+#### Create Virtual Environment (if not exist)
+```bash
+uv venv
+```
+
+### If pyproject.toml is not given or you want to modify packages
+#### Create a new Python project 
+```bash
+uv init
+```
+This will create a pyproject.toml Add this text at the end of pyproject.toml in order to manage dependency in development environment.
+
+Use uv to create a virtual environment named venv:
+
+```bash
+uv venv venv
+```
+#### Activate venv
+Activate the virtual environment you just created:
+```bash
+source venv/bin/activate
+```
+#### Install requirements into a lockfile.
+```bash
+uv pip install -r requirements.txt pyproject.toml
+```
+#### Set up Juypter notebook kernel.
+Run the following command to register your virtual environment as a kernel in Jupyter:
+```bash
+python -m ipykernel install --user --name=home_credit_risk --display-name "Python (home_credit_risk)"
+```
+## Notebooks
+
+- **Home_credit_risk.ipynb**: Notebook that cover part 1 Data Quality & EDA and Part 2 Model prediction workflow
+- **Home_credit_risk_deployment.ipynb**: Notebook that covers Part 2 Model deployment on unseen dataset and Part 3 Propose methodologies for evaluating business impact and tracking model performance post-deployment
 
 
 ## Project Organization
@@ -37,10 +73,10 @@ This command creates a copy of `.env.example` and names it `.env`, allowing you 
 ├── data
 │   ├── external       <- Data from third party sources
 │   ├── interim        <- Intermediate data that has been transformed
-│   ├── processed      <- The final, canonical data sets for modeling
-│   └── raw            <- The original, immutable data dump
+│   ├── processed      <- The final, canonical data sets for modeling for aggregate datasets and submission
+│   └── raw            <- The original dataset
 │
-├── models             <- Trained and serialized models, model predictions, or model summaries
+├── models             <- Trained models, imputer, lavbel_encoder, one_hot_code, selected_features
 │
 ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
 │                         the creator's initials, and a short `-` delimited description, e.g.

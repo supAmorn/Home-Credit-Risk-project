@@ -94,3 +94,20 @@ target/
 
 # exclude data from source control by default
 # /data/
+data/processed/pre_appl_agg.csv
+data/processed/submission.csv
+data/raw/home-credit-default-risk/application_test.csv
+data/raw/home-credit-default-risk/application_train.csv
+data/raw/home-credit-default-risk/bureau_balance.csv
+data/raw/home-credit-default-risk/bureau.csv
+data/raw/home-credit-default-risk/credit_card_balance.csv
+data/raw/home-credit-default-risk/HomeCredit_columns_description.csv
+data/raw/home-credit-default-risk/installments_payments.csv
+data/raw/home-credit-default-risk/POS_CASH_balance.csv
+data/raw/home-credit-default-risk/previous_application.csv
+data/raw/home-credit-default-risk/sample_submission.csv
+data/processed/bureau_agg.csv
+data/processed/credit_card_agg.csv
+data/processed/install_pay_agg.csv
+data/processed/pos_cash_agg.csv
+reports/Slides/Home Credit Risk Presentation.pdf
