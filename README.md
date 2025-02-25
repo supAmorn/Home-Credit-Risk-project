@@ -1,4 +1,30 @@
-# Home Credit Risk Data Project
+# Credit Risk Default Prediction – Data Science Project  
+
+## Project Overview  
+This project focuses on enhancing **loan risk assessment** by leveraging machine learning to detect high-risk applicants. By improving the accuracy of default prediction, the model helps businesses **reduce bad debt exposure** and optimize lending strategies.  
+
+## Key Contributions  
+- **Developed a predictive model** to classify loan applicants based on default risk, increasing early detection and financial risk mitigation.  
+- **Implemented multiple machine learning models**, including **Logistic Regression, Random Forest, XGBoost, and LightGBM**, achieving an **AUC score of 0.77** and improving default detection accuracy by **15%**.  
+- **Deployed a credit risk prediction application** using **Pickle**, allowing seamless integration into business operations for real-time risk evaluation.  
+
+## Technologies Used  
+- **Machine Learning Models**: Logistic Regression, Random Forest, XGBoost, LightGBM  
+- **Libraries**: Pandas, NumPy, Scikit-learn, LightGBM, XGBoost  
+- **Deployment**: Pickle for model serialization and integration  
+
+## Business Impact  
+- **Enhanced credit risk evaluation**: Improved default detection accuracy, reducing bad debt exposure.  
+- **Real-time loan risk assessment**: Enabled **instant decision-making** by integrating the ML model into the business workflow.  
+- **Scalable and automated process**: Streamlined loan risk prediction without manual intervention.  
+
+## Next Steps  
+- **Further model tuning** to improve predictive accuracy and interpretability.  
+- **Deploying the model as an API** for real-time access via web applications.  
+- **Monitoring model performance** using drift detection techniques to maintain accuracy over time.  
+
+--- 
+📌 **Author**: Supanuth Amorntiyanggoon
 
 ## Prerequisites
 
